@@ -35,14 +35,32 @@ class Products with ChangeNotifier {
       imageUrl:
           'https://www.the-best-hair-dryer-reviews.com/wp-content/uploads/2013/10/remington-hair-dryer-best-hair-dryer-reviews5.jpg',
     ),
-  ] ;
+  ];
+
+  var _showFavouritesOnly = false;
 
   List<Product> get items {
+    // if (_showFavouritesOnly) {
+    //   return _items.where((prodItem) => prodItem.isFavourite).toList();
+    // }
     return [..._items];
   }
 
   Product findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
+  }
+
+  // void showFavouritesOnly() {
+  //   _showFavouritesOnly = true;
+  //   notifyListeners();
+  // }
+
+  // void showAll() {
+  //   _showFavouritesOnly = false;
+  // }
+
+  List<Product> get favouriteItems {
+    return _items.where((prodItem) => prodItem.isFavourite).toList();
   }
 
   void addProduct() {

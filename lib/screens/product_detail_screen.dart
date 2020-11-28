@@ -22,6 +22,14 @@ class ProductDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(loadedProduct.title),
       ),
+      body: Container(
+        height: 300,
+        width: double.infinity,
+        child: Image.network(
+          loadedProduct.imageUrl,
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }

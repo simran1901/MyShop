@@ -49,7 +49,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 decoration: InputDecoration(labelText: 'Description'),
                 maxLines: 3,
                 keyboardType: TextInputType.multiline,
-                focusNode: _descriptionNode,
+                focusNode: _descriptionFocusNode,
               ),
             ],
           ),

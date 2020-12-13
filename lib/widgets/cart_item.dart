@@ -45,7 +45,7 @@ class CartItem extends StatelessWidget {
             content: Text(
               'Do you want to remove the item from the cart?',
             ),
-            actions: [
+            actions: <Widget>[
               FlatButton(
                 child: Text('No'),
                 onPressed: () {
